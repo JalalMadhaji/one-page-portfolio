@@ -3,7 +3,7 @@ $(document).ready(function() {
   setTimeout(function() {
     $("#loading_wrap").remove();
     $("body").css({ height: "unset", overflowY: "scroll" });
-  }, 500);
+  }, 5000);
   // menu toggle class when scrolling
   $(document).scroll(function() {
     if ($(this).scrollTop() > 10) {
@@ -30,6 +30,28 @@ $(document).ready(function() {
           .eq(i)
           .addClass("active");
       }
+    });
+    // handle the go to the top button
+    $(document).scroll(function() {
+        if ($(window).scrollTop() > 600) {
+            $("#go-back").css({ opacity: ".3", cursor: "pointer" });
+            $("#go-back").on("mouseover", function() {
+                if ($(window).scrollTop() > 600) {
+                    $(this).css({ opacity: ".7", cursor: "pointer" });
+                } else {
+                    $("#go-back").css({ opacity: "0", cursor: "default" });
+                }
+            });
+            $("#go-back").on("mouseout", function() {
+                if ($(window).scrollTop() > 600) {
+                    $(this).css({ opacity: ".3", cursor: "pointer" });
+                } else {
+                    $(this).css({ opacity: "0", cursor: "default" });
+                }
+            });
+        } else {
+            $("#go-back").css({ opacity: "0", cursor: "default" });
+        }
     });
   });
 
