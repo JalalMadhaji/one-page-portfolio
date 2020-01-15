@@ -489,3 +489,39 @@ header {
     outline: none;
     box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--first-color);
 }
+footer {
+    padding: 30px 0;
+    background: #040b0b;
+    color: white;
+}
+footer .social {
+    width: 300px;
+    margin: 0 auto;
+}
+.social ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+.social li {
+    height: 40px;
+    width: 40px;
+    background: var(--first-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #040b0b;
+    font-size: 20px;
+}
+footer p {
+    width: 50%;
+    margin: 40px auto;
+    font-weight: 200;
+    line-height: 1.7;
+}
+footer address {
+    text-align: center;
+    font-size: 14px;
+}
