@@ -375,3 +375,31 @@ header {
     color: var(--second-color);
     font-size: 20px;
 }
+.services {
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+.card {
+    padding: 20px;
+    background: var(--first-color);
+    font-size: 95%;
+    /* color: #042f4b; */
+    transition: all 0.4s ease;
+    box-shadow: 0 0 5px rgba(170, 170, 170, 0.568);
+    border-radius: 2px;
+    color: var(--second-color);
+}
+.card img {
+    width: 30%;
+    margin: 30px auto;
+}
+.card p {
+    margin: 30px auto;
+    /* filter: contrast(70%); */
+    padding: 0 20px;
+}
+.card:hover {
+    box-shadow: 0 20px 20px rgba(170, 170, 170, 0.548);
+}
