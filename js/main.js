@@ -1,4 +1,9 @@
 $(document).ready(function() {
+  // handle the loading screen
+  setTimeout(function() {
+    $("#loading_wrap").remove();
+    $("body").css({ height: "unset", overflowY: "scroll" });
+  }, 500);
   // menu toggle class when scrolling
   $(document).scroll(function() {
     if ($(this).scrollTop() > 10) {
