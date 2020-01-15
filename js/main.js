@@ -27,4 +27,24 @@ $(document).ready(function() {
       }
     });
   });
+
+  // handle the nav bar in small devices
+  let menu = document.querySelector(".menu nav");
+  let bars = document.getElementById("bars");
+
+  bars.addEventListener("click", function(e) {
+    // console.log(e.target);
+    $(".menu nav").toggleClass("open-nav");
+  });
+  $(window).resize(function() {
+    $(".menu nav").removeClass("open-nav");
+    $(".menu").css("width", "100%");
+  });
+  $(".menu nav li").each(function(i) {
+    $("a")
+      .eq(i)
+      .click(function() {
+        $(".menu nav").removeClass("open-nav");
+      });
+  });
 });
